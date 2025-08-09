@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: SakeLog
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sakelog_db
+    username: sakelog_user
+    password: pass
+
+  jpa:
+    hibernate:
+      ddl-auto: update
