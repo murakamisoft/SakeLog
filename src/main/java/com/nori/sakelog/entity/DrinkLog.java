@@ -17,6 +17,7 @@ public class DrinkLog {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "t_drink_log_id")
   private Long tDrinkLogId;
 
   @Column(nullable = false)
