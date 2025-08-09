@@ -78,7 +78,7 @@ Field="コメント（感想）","comment","text",,,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20250809131710
+ModifiedDateTime=20250809135240
 Position="Main",450,450
 ZOrder=3
 
