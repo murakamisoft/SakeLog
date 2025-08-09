@@ -4,7 +4,15 @@
 outputFile="combined.txt"
 
 # === 対象拡張子 ===
-extensions=("java" "sql" "xml" "yaml" "gradle" "a5er")
+extensions=()
+extensions+=("java")
+extensions+=("sql")
+extensions+=("xml")
+extensions+=("yaml")
+extensions+=("gradle")
+extensions+=("a5er")
+extensions+=("jmx")
+
 
 # === 出力ファイル初期化 ===
 echo "以下が最新のソース一覧ですので共有します" > "$outputFile"
