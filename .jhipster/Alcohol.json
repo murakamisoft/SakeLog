@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20260314101407"
+  },
+  "applications": ["*"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "alcoholName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "alcoholType",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "brandName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "abv",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "name": "Alcohol",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

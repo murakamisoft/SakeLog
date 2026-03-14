@@ -1,0 +1,62 @@
+application {
+  config {
+    applicationType monolith
+    authenticationType jwt
+    baseName SakeLog
+    buildTool gradle
+    cacheProvider ehcache
+    clientFramework react
+    clientTheme flatly
+    clientThemeVariant primary
+    creationTimestamp 1773483042380
+    databaseType sql
+    devDatabaseType oracle
+    enableGradleDevelocity false
+    enableHibernateCache false
+    enableTranslation false
+    jhipsterVersion "9.0.0"
+    jwtSecretKey "YTBhNzgyOTVkOTE1Mzk5NGE1MDA5NzUxMGMzMzVlNDk3OTZhMDhjMTJkMjZiYjUzODkwOGI4MTIxN2EwODcwMDRiYjhkZjQ1OGZhYzIwZWZkMmI4ZDJkZGJjYzRhZDQ5MTMzYTg2ZWQxOTc1ZTRhMmQwNWIwYmJjMDg0OGYxMzc="
+    microfrontends []
+    nativeLanguage ja
+    packageName com.nori
+    prodDatabaseType oracle
+    reactive false
+    testFrameworks []
+    withAdminUi true
+  }
+
+  entities Alcohol, DrinkLog, Place
+}
+
+@ChangelogDate("20260314101407")
+entity Alcohol {
+  alcoholName String required maxlength(200)
+  alcoholType String maxlength(50)
+  brandName String maxlength(200)
+  abv BigDecimal
+}
+@ChangelogDate("20260314101409")
+entity DrinkLog {
+  drinkDate Instant required
+  quantity Integer
+  rating Integer
+  memo String maxlength(1000)
+  createdAt Instant
+}
+@ChangelogDate("20260314101408")
+entity Place {
+  placeName String required maxlength(200)
+  placeType String maxlength(50)
+  city String maxlength(100)
+}
+
+relationship ManyToOne {
+  DrinkLog{user} to User with builtInEntity
+  DrinkLog{alcohol} to Alcohol
+  DrinkLog{place} to Place
+}
+
+dto Alcohol, DrinkLog, Place with mapstruct
+service Alcohol, DrinkLog, Place with serviceClass
+search Alcohol, DrinkLog, Place with no
+paginate DrinkLog with pagination
