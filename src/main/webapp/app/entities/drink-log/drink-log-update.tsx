@@ -121,10 +121,10 @@ export const DrinkLogUpdate = () => {
                   required: { value: true, message: 'このフィールドを入力してください。' },
                 }}
               />
-              <ValidatedField label="Quantity" id="drink-log-quantity" name="quantity" data-cy="quantity" type="text" />
-              <ValidatedField label="Rating" id="drink-log-rating" name="rating" data-cy="rating" type="text" />
+              <ValidatedField label="杯数" id="drink-log-quantity" name="quantity" data-cy="quantity" type="text" />
+              <ValidatedField label="評価" id="drink-log-rating" name="rating" data-cy="rating" type="text" />
               <ValidatedField
-                label="Memo"
+                label="メモ"
                 id="drink-log-memo"
                 name="memo"
                 data-cy="memo"
@@ -134,39 +134,39 @@ export const DrinkLogUpdate = () => {
                 }}
               />
               <ValidatedField
-                label="Created At"
+                label="作成日"
                 id="drink-log-createdAt"
                 name="createdAt"
                 data-cy="createdAt"
                 type="datetime-local"
                 placeholder="YYYY-MM-DD HH:mm"
               />
-              <ValidatedField id="drink-log-user" name="user" data-cy="user" label="User" type="select">
+              <ValidatedField id="drink-log-user" name="user" data-cy="user" label="ユーザ" type="select">
                 <option value="" key="0" />
                 {users
                   ? users.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.login}
                       </option>
                     ))
                   : null}
               </ValidatedField>
-              <ValidatedField id="drink-log-alcohol" name="alcohol" data-cy="alcohol" label="Alcohol" type="select">
+              <ValidatedField id="drink-log-alcohol" name="alcohol" data-cy="alcohol" label="酒" type="select">
                 <option value="" key="0" />
                 {alcohols
                   ? alcohols.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.alcoholName}
                       </option>
                     ))
                   : null}
               </ValidatedField>
-              <ValidatedField id="drink-log-place" name="place" data-cy="place" label="Place" type="select">
+              <ValidatedField id="drink-log-place" name="place" data-cy="place" label="場所" type="select">
                 <option value="" key="0" />
                 {places
                   ? places.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.placeName}
                       </option>
                     ))
                   : null}
