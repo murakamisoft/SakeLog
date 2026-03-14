@@ -30,6 +30,9 @@ spring:
   jackson2:
     serialization:
       indent-output: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:oracle:thin:@//localhost:1521/XEPDB1
     hikari:
       poolName: Hikari
       auto-commit: false

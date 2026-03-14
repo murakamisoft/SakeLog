@@ -2,7 +2,7 @@
   "annotations": {
     "changelogDate": "20260314101407"
   },
-  "applications": ["*"],
+  "applications": ["SakeLog"],
   "dto": "mapstruct",
   "fields": [
     {
